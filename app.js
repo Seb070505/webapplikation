@@ -5,6 +5,7 @@ let y = 10; let r = 200; g = 180; b = 0;
 let ned = true;
 let rystet = 0;
 let flyttet = 0;
+let pos = 150
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
@@ -30,7 +31,7 @@ function setup() {
 function draw() {
     background(r, g, b);
     strokeWeight(10);
-    ellipse(50*accelerationX, y, 50);
+    ellipse(pos, y, 50);
     if (ned)
         y++;
     else
@@ -56,5 +57,6 @@ text('flyttet: ' + str(flyttet),50, height-50);
 
 function deviceMoved(){
     flyttet++;
+    pos++;
 
 }
