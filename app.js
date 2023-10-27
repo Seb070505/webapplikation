@@ -6,6 +6,7 @@ let ned = true;
 let rystet = 0;
 let flyttet = 0;
 let pos = 150
+let ko = true
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
@@ -51,10 +52,13 @@ function draw() {
 
     if(pos > 300){
         pos--;
+        ko = false
     }
     if(pos < 0){
-        pos++;
+        ko = true
     }
+
+ 
 
 text('rystet: ' + str(rystet), 50, height-100);
 text('flyttet: ' + str(flyttet),50, height-50);
@@ -62,6 +66,9 @@ text('flyttet: ' + str(flyttet),50, height-50);
 
 function deviceMoved(){
     flyttet++;
+  if(ko == true){
     pos++;
+  }
+
 
 }
