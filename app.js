@@ -6,8 +6,11 @@ let ned = true;
 let rystet = 0;
 let flyttet = 0;
 let pos = 150
+let pos2 = 275
 let ko = true
 let kat = false
+let lam = true
+let gris = false
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
@@ -33,7 +36,7 @@ function setup() {
 function draw() {
     background(r, g, b);
     strokeWeight(10);
-    ellipse(pos, 275, 50);
+    ellipse(pos, pos2, 50);
     if (ned)
         y++;
     else
@@ -76,6 +79,24 @@ if(pos > 300){
 if(pos < 0){
     ko = true
     kat = false
+}
+
+if(lam == true){
+    pos2++;
+  }
+
+if(gris == true){
+    pos2--;
+}
+
+if(pos2 > 300){
+    gris = true
+    lam = false
+}
+
+if(pos2 < 0){
+    lam = true
+    gris = false
 }
 
 
