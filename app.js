@@ -7,6 +7,7 @@ let rystet = 0;
 let flyttet = 0;
 let pos = 150
 let ko = true
+let kat = false
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
@@ -62,14 +63,19 @@ function deviceMoved(){
 if(ko == true){
     pos++;
   }
-  
-if(pos > 300){
+
+if(kat == true){
     pos--;
+}
+
+if(pos > 300){
+    kat = true
     ko = false
 }
 
 if(pos < 0){
     ko = true
+    kat = false
 }
 
 
