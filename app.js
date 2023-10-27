@@ -33,7 +33,7 @@ function setup() {
 function draw() {
     background(r, g, b);
     strokeWeight(10);
-    ellipse(pos, y, 50);
+    ellipse(pos, 275, 50);
     if (ned)
         y++;
     else
