@@ -50,13 +50,6 @@ function draw() {
     if (accelerationX > 20){
     }
 
-    if(pos > 300){
-        pos--;
-        ko = false
-    }
-    if(pos < 0){
-        ko = true
-    }
 
  
 
@@ -66,9 +59,18 @@ text('flyttet: ' + str(flyttet),50, height-50);
 
 function deviceMoved(){
     flyttet++;
-  if(ko == true){
+if(ko == true){
     pos++;
   }
+  
+if(pos > 300){
+    pos--;
+    ko = false
+}
+
+if(pos < 0){
+    ko = true
+}
 
 
 }
