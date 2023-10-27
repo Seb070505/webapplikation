@@ -89,7 +89,7 @@ if(gris == true){
     pos2--;
 }
 
-if(pos2 > 300){
+if(pos2 > 550){
     gris = true
     lam = false
 }
