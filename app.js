@@ -99,5 +99,4 @@ if(pos2 < 0){
     gris = false
 }
 
-
 }
