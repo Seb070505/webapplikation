@@ -47,8 +47,13 @@ function draw() {
         rystet++;
     }
     if (accelerationX > 20){
+    }
 
-
+    if(pos > 300){
+        pos--;
+    }
+    if(pos < 0){
+        pos++;
     }
 
 text('rystet: ' + str(rystet), 50, height-100);
