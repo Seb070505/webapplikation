@@ -30,7 +30,7 @@ function setup() {
 function draw() {
     background(r, g, b);
     strokeWeight(10);
-    ellipse(accelerationX, y, 50);
+    ellipse(50*accelerationX, y, 50);
     if (ned)
         y++;
     else
