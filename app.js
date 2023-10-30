@@ -53,13 +53,13 @@ function draw() {
     }
 
 
-    if (accelerationX > 0){
+    if (accelerationX > 1){
         if(ko == true){
-            pos++;
+            pos+20;
           }
         
         if(kat == true){
-            pos--;
+            pos-20;
         }
         
         if(pos > 300){
