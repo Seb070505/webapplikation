@@ -44,7 +44,7 @@ function draw() {
         ellipse(pos, pos2, 50);
     }
  
-    if (firkant == true || trekant == false || false){
+    if (firkant == true || trekant == false ||circle == false){
         rect(pos, pos2, 50, 50);
     }
 
