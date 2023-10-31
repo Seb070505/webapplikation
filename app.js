@@ -94,7 +94,11 @@ function draw() {
 
     }
 
+function touchMoved(){
+    ellispe(mouseX,mouseY,50);
+    return false;
 
+}
  
 
 text('rystet: ' + str(rystet), 50, height-100);
