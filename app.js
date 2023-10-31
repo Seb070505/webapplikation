@@ -11,6 +11,10 @@ let ko = true
 let kat = false
 let lam = true
 let gris = false
+let circle = true
+let firkant = false
+let trekant = false
+
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
@@ -36,7 +40,20 @@ function setup() {
 function draw() {
     background(r, g, b);
     strokeWeight(10);
-    ellipse(pos, pos2, 50);
+    if (firkant == false || trekant == false || circle == true){
+        ellipse(pos, pos2, 50);
+    }
+ 
+    if (firkant == true || trekant == false || false){
+        rect(pos, pos2, 50, 50);
+    }
+
+    if(accelerationY > 70){
+        firkant = true
+        circle = false
+        trekant = false
+    }
+
     if (ned)
         y++;
     else
