@@ -53,7 +53,7 @@ function draw() {
     }
 
 
-    if (accelerationX > 1){
+    if (accelerationX > 5){
         if(ko == true){
             pos+20;
           }
@@ -73,7 +73,7 @@ function draw() {
         }
     }
 
-    if (accelerationY > 1){
+    if (accelerationY > 5){
         if(lam == true){
             pos2+20;
           }
