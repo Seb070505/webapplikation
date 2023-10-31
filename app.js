@@ -1,6 +1,4 @@
-function setup(){
-    canvas = createCanvas(300, 550)
-}
+
 let y = 10; let r = 200; g = 180; b = 0;
 let ned = true;
 let rystet = 0;
@@ -14,7 +12,7 @@ let gris = false
 let circle = true
 let firkant = false
 let trekant = false
-
+''
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
@@ -40,11 +38,11 @@ function setup() {
 function draw() {
     background(r, g, b);
     strokeWeight(10);
-    if (firkant === false || trekant === false || circle === true){
+    if (firkant === false && trekant === false && circle === true){
         ellipse(pos, pos2, 50);
     }
  
-    if (firkant === true || trekant === false ||circle === false){
+    else if (firkant === true && trekant === false && circle === false){
         rect(pos, pos2, 50, 50);
     }
 
