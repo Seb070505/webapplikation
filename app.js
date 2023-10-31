@@ -95,8 +95,7 @@ function draw() {
     }
 
 function touchMoved(){
-    ellispe(mouseX,mouseY,50);
-    return false;
+    ellispe(mouseX,mouseY,75);
 
 }
  
