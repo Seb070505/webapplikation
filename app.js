@@ -55,11 +55,11 @@ function draw() {
 
     if (accelerationX > 5){
         if(ko == true){
-            pos+50;
+            pos++;
           }
         
         if(kat == true){
-            pos-50;
+            pos--;
         }
         
         if(pos > 300){
@@ -75,11 +75,11 @@ function draw() {
 
     if (accelerationY > 5){
         if(lam == true){
-            pos2+50;
+            pos2++;
           }
         
         if(gris == true){
-            pos2-50;
+            pos2--;
         }
         
         if(pos2 > 550){
