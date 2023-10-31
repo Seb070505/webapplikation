@@ -54,7 +54,6 @@ function draw() {
 
 
  
-
 text('rystet: ' + str(rystet), 50, height-100);
 text('flyttet: ' + str(flyttet),50, height-50);
 }
