@@ -40,11 +40,11 @@ function setup() {
 function draw() {
     background(r, g, b);
     strokeWeight(10);
-    if (firkant == false || trekant == false || circle == true){
+    if (firkant === false || trekant === false || circle === true){
         ellipse(pos, pos2, 50);
     }
  
-    if (firkant == true || trekant == false ||circle == false){
+    if (firkant === true || trekant === false ||circle === false){
         rect(pos, pos2, 50, 50);
     }
 
