@@ -83,7 +83,7 @@ function deviceMoved(){
       }
     
     if(gris == true){
-        pos2-.;
+        pos2--;
     }
     
     if(pos2 > 550){
