@@ -73,7 +73,7 @@ function draw() {
         }
     }
 
-    if (accelerationY > 20){
+    if (accelerationY > 1){
         if(lam == true){
             pos2++;
           }
