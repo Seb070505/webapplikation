@@ -53,46 +53,6 @@ function draw() {
     }
 
 
-    if (accelerationX > 5){
-        if(ko == true){
-            pos++;
-          }
-        
-        if(kat == true){
-            pos--;
-        }
-        
-        if(pos > 300){
-            kat = true
-            ko = false
-        }
-        
-        if(pos < 0){
-            ko = true
-            kat = false
-        }
-    }
-
-    if (accelerationY > 5){
-        if(lam == true){
-            pos2++;
-          }
-        
-        if(gris == true){
-            pos2--;
-        }
-        
-        if(pos2 > 550){
-            gris = true
-            lam = false
-        }
-        
-        if(pos2 < 0){
-            lam = true
-            gris = false
-        }
-
-    }
  
 
 text('rystet: ' + str(rystet), 50, height-100);
@@ -101,6 +61,40 @@ text('flyttet: ' + str(flyttet),50, height-50);
 
 function deviceMoved(){
     flyttet++;
+    if(ko == true){
+        pos++;
+      }
+    
+    if(kat == true){
+        pos--;
+    }
+    
+    if(pos > 300){
+        kat = true
+        ko = false
+    }
+    
+    if(pos < 0){
+        ko = true
+        kat = false
+    }
+    if(lam == true){
+        pos2++;
+      }
+    
+    if(gris == true){
+        pos2-.;
+    }
+    
+    if(pos2 > 550){
+        gris = true
+        lam = false
+    }
+    
+    if(pos2 < 0){
+        lam = true
+        gris = false
+    }
 
 
 }
