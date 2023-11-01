@@ -53,7 +53,7 @@ function draw() {
     
     if (firkant === false && trekant === false && circle === true){
        // ellipse(pos, pos2, 50);
-        image(bagel,pos,pos2,50,50)
+        image(bagel,pos,pos2,100,100)
         text('Ryk dig fatso: '  + str(stille),5,height-100)
     }
  
