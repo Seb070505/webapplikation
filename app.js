@@ -1,8 +1,4 @@
 
-let y = 10; let r = 200; g = 180; b = 0;
-let ned = true;
-let rystet = 0;
-let flyttet = 0;
 let pos = 150
 let pos2 = 275
 let ko = true
@@ -12,7 +8,8 @@ let gris = false
 let circle = true
 let firkant = false
 let trekant = false
-''
+let løbet = 0;
+let hoppet = 0;
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
@@ -54,32 +51,23 @@ function draw() {
         firkant = true
         circle = false
         trekant = false
+        hoppet++;
     }
 
     if(accelerationX > 100){
         firkant = false
         circle = false
         trekant = true
-    }
-
-
-    if (accelerationX > 70) {
-        r = random(0, 256);
-        g = random(0, 256);
-        b = random(0, 256);
-        if(rystet%2 == 0)
-        ned = !ned;
-        rystet++;
+        løbet++;
     }
 
 
  
-text('rystet: ' + str(rystet), 50, height-100);
-text('flyttet: ' + str(flyttet),50, height-50);
+text('Hvor meget du har hoppet: ' + str(hoppet), 50, height-100);
+text('Hvor meget du har løbbet: ' + str(løbet),50, height-50);
 }
 
 function deviceMoved(){
-    flyttet++;
     if(ko == true){
         pos++;
       }
