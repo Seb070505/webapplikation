@@ -65,14 +65,14 @@ function draw() {
         image(dorito,pos,pos2,300,300)
     }
 
-    if(accelerationY > 20){
+    if(accelerationY > 70){
         firkant = true
         circle = false
         trekant = false
         hoppet++;
     }
 
-    if(accelerationX > 50){
+    if(accelerationX > 100){
         firkant = false
         circle = false
         trekant = true
