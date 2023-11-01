@@ -46,11 +46,29 @@ function draw() {
         rect(pos, pos2, 50, 50);
     }
 
+    else if(firkant === false && trekant === true && circle === false){
+        ellipse(pos, pos2, 100)
+        fill(255,0,255)
+    }
+
     if(accelerationY > 70){
         firkant = true
         circle = false
         trekant = false
     }
+
+    if(accelerationX > 100){
+        firkant = false
+        circle = false
+        trekant = true
+    }
+
+    if(accelerationY < 1 && accelerationX < 1){
+        circle = true
+        firkant = false
+        trekant = false
+    }
+
 
     if (ned)
         y++;
