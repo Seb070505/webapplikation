@@ -33,7 +33,7 @@ function setup() {
 }
 
 function draw() {
-    background(255);
+    background(255,0,255);
     strokeWeight(10);
     if (firkant === false && trekant === false && circle === true){
         ellipse(pos, pos2, 50);
