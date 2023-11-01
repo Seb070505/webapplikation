@@ -46,6 +46,7 @@ function setup() {
     parentDiv.insertBefore(canvas.elt, p);
 }
 
+
 function draw() {
     background(255,255,255)
     strokeWeight(5);
