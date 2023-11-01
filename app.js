@@ -10,11 +10,23 @@ let firkant = false
 let trekant = false
 let løbet = 0;
 let hoppet = 0;
+let bagel;
+let donut;
+let dorito;
+
+
+function preload(){
+bagel = loadImage('assets/bagel.png');
+donut = loadImage('assets/donut.png');
+dorito = loadImage('assets/dorito.png')
+}
+
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
     textSize(24);
     background(255, 255, 255);
+    imageMode(CENTER);
     // giver canvas border på 2 pixel, 
     // og sørger derefter for at kanten tælles med i width
     canvas.elt.style.border = '5px solid black';
@@ -36,16 +48,20 @@ function setup() {
 function draw() {
     background(255,255,255)
     strokeWeight(10);
+    
     if (firkant === false && trekant === false && circle === true){
-        ellipse(pos, pos2, 50);
+       // ellipse(pos, pos2, 50);
+        image(bagel,pos,pos2,50,50)
     }
  
     else if (firkant === true && trekant === false && circle === false){
-        rect(pos, pos2, 50, 50);
+       // rect(pos, pos2, 50, 50);
+       image(donut,pos,pos2,100,100)
     }
 
     else if(firkant === false && trekant === true && circle === false){
-        ellipse(pos, pos2, 300)
+        //ellipse(pos, pos2, 300)
+        image(dorito,pos,pos2,300,300)
     }
 
     if(accelerationY > 70){
