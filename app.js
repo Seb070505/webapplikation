@@ -54,7 +54,7 @@ function draw() {
     if (firkant === false && trekant === false && circle === true){
        // ellipse(pos, pos2, 50);
         image(bagel,pos,pos2,50,50)
-        text('Bevæg dig tyksak: ' + str(stille),5,height-100)
+        text('Ryk dig fatso: '  + str(stille),5,height-100)
     }
  
     else if (firkant === true && trekant === false && circle === false){
