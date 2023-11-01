@@ -62,19 +62,7 @@ function draw() {
         trekant = true
     }
 
-   // if(accelerationY < 1 && accelerationX < 1){
-     //   circle = true
-     //   firkant = false
-     //   trekant = false
-   // }
 
-
-    if (ned)
-        y++;
-    else
-        y--;
-    if (y >= height || y <= 0)
-        ned = !ned;
     if (accelerationX > 70) {
         r = random(0, 256);
         g = random(0, 256);
