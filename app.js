@@ -47,8 +47,7 @@ function draw() {
     }
 
     else if(firkant === false && trekant === true && circle === false){
-        ellipse(pos, pos2, 100)
-        fill(255,0,255)
+        ellipse(pos, pos2, 300)
     }
 
     if(accelerationY > 70){
