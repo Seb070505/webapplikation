@@ -16,8 +16,8 @@ let dorito;
 
 
 function preload(){
-bagel = loadImage('assets/bagel.png');
-donut = loadImage('assets/donut.png');
+bagel = loadImage('assets/Bagel.png');
+donut = loadImage('assets/Donut.png');
 dorito = loadImage('assets/dorito.png')
 }
 
