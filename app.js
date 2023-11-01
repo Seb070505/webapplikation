@@ -53,16 +53,19 @@ function draw() {
     if (firkant === false && trekant === false && circle === true){
        // ellipse(pos, pos2, 50);
         image(bagel,pos,pos2,50,50)
+        text('Bevæg dig tyksak: ' + str(stille),5,height-100)
     }
  
     else if (firkant === true && trekant === false && circle === false){
        // rect(pos, pos2, 50, 50);
        image(donut,pos,pos2,100,100)
+       text('Hoppet: ' + str(hoppet), 5, height-100);
     }
 
     else if(firkant === false && trekant === true && circle === false){
         //ellipse(pos, pos2, 300)
         image(dorito,pos,pos2,300,300)
+        text('Løbet: ' + str(løbet),5, height-100);
     }
 
     if(accelerationY > 70){
@@ -86,9 +89,7 @@ function draw() {
         stille++;
     }
 
-text('Hoppet: ' + str(hoppet), 5, height-100);
-text('Løbet: ' + str(løbet),5, height-50);
-text('Bevæg dig tyksak: ' + str(stille),5,height-150)
+
 }
 
 function deviceMoved(){
