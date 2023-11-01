@@ -62,11 +62,11 @@ function draw() {
         trekant = true
     }
 
-    if(accelerationY < 1 && accelerationX < 1){
-        circle = true
-        firkant = false
-        trekant = false
-    }
+   // if(accelerationY < 1 && accelerationX < 1){
+     //   circle = true
+     //   firkant = false
+     //   trekant = false
+   // }
 
 
     if (ned)
