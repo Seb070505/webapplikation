@@ -62,9 +62,8 @@ function draw() {
     }
 
 
-text('Hvor meget du har hoppet: ' + str(hoppet), 50, height-100);
-text('Hvor meget du har løbbet: ' + str(løbet),50, height-50);
-
+text('Hoppet: ' + str(hoppet), 50, height-100);
+text('Løbet: ' + str(løbet),50, height-50);
 }
 
 function deviceMoved(){
