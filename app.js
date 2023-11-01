@@ -10,6 +10,7 @@ let firkant = false
 let trekant = false
 let løbet = 0;
 let hoppet = 0;
+let stille = 0;
 let bagel;
 let donut;
 let dorito;
@@ -64,23 +65,30 @@ function draw() {
         image(dorito,pos,pos2,300,300)
     }
 
-    if(accelerationY > 70){
+    if(accelerationY > 10){
         firkant = true
         circle = false
         trekant = false
         hoppet++;
     }
 
-    if(accelerationX > 100){
+    if(accelerationX > 20){
         firkant = false
         circle = false
         trekant = true
         løbet++;
     }
 
+    if(accelerationX === 0 && accelerationY === 0){
+        firkant = false
+        circle = true
+        trekant = false 
+        stille++;
+    }
 
 text('Hoppet: ' + str(hoppet), 50, height-100);
 text('Løbet: ' + str(løbet),50, height-50);
+text('Bevæg dig tyksak: ' + str(stille),50,height-150)
 }
 
 function deviceMoved(){
