@@ -48,7 +48,7 @@ function setup() {
 
 function draw() {
     background(255,255,255)
-    strokeWeight(10);
+    strokeWeight(5);
     
     if (firkant === false && trekant === false && circle === true){
        // ellipse(pos, pos2, 50);
@@ -65,14 +65,14 @@ function draw() {
         image(dorito,pos,pos2,300,300)
     }
 
-    if(accelerationY > 10){
+    if(accelerationY > 20){
         firkant = true
         circle = false
         trekant = false
         hoppet++;
     }
 
-    if(accelerationX > 20){
+    if(accelerationX > 50){
         firkant = false
         circle = false
         trekant = true
@@ -86,9 +86,9 @@ function draw() {
         stille++;
     }
 
-text('Hoppet: ' + str(hoppet), 50, height-100);
-text('Løbet: ' + str(løbet),50, height-50);
-text('Bevæg dig tyksak: ' + str(stille),10,height-150)
+text('Hoppet: ' + str(hoppet), 5, height-100);
+text('Løbet: ' + str(løbet),5, height-50);
+text('Bevæg dig tyksak: ' + str(stille),5,height-150)
 }
 
 function deviceMoved(){
