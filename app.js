@@ -25,7 +25,7 @@ dorito = loadImage('assets/dorito.png')
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
-    textSize(10);
+    textSize(4);
     background(255, 255, 255);
     imageMode(CENTER);
     canvas.elt.style.border = '5px solid black';
