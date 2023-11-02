@@ -52,7 +52,7 @@ function draw() {
         text('Ændre på bagelen!!',5,height-100)
         }
         else if (stille > 1000 && stille < 10000){
-        text('Bevæg dig for at opnå en belønning!!',5,height-100)
+        text('Bevæg dig pls',5,height-100)
         }
         else if (stille > 10000){
         text('Ryk dig forhelvede',5,height-100)
@@ -62,7 +62,7 @@ function draw() {
     else if (firkant === true && trekant === false && circle === false){
        image(donut,pos,pos2,100,100)
        if(hoppet < 1000){
-       text('Få scoren op på 1000 for at opnå en belønning: ' + str(hoppet), 5, height-100);
+       text('Få scoren over 1000: ' + str(hoppet), 5, height-100);
        }
        else if(hoppet > 1000){
         text('Tag en donut! :D', 5, height-100);
@@ -73,7 +73,7 @@ function draw() {
     else if(firkant === false && trekant === true && circle === false){
         image(dorito,pos,pos2,300,300)
         if(løbet < 500){
-        text('Få scoren op på 500 for at tage en belønning: ' + str(løbet),5, height-100);
+        text('Få scoren over 500: ' + str(løbet),5, height-100);
         }
         else if(løbet > 500){
         text('Tag en håndfuld doritos! :D' + str(løbet),5, height-100);
