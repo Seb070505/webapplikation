@@ -8,7 +8,6 @@
                     padding: 0;
                     background-color: lightgray;
                     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                    /* vmin skalerer responsivt til viewporten */
                     letter-spacing: 1vmin;
                 }
         
@@ -16,30 +15,21 @@
                     max-width: 100%;
                     text-align: center;
                     color: rgb(31, 28, 28);
-                    background-color: rgb(179, 0, 255);
+                    background-color: plum;
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
-                    /* 3 kolonner, fr står for fraction, */
-                    /* grid-gap: 5%; */
-                    /* %-enhed gør det også responsivt */
                 }
-                .beholder-item {
-                    /* Grid item styles */
-                }
+                
                 @media (max-width: 768px) {
                     .beholder {
                         grid-template-columns: 1fr 1fr;
-                        /* 2 kolonner på små skærme */
+                
                     }
                 }
                 @media (max-width: 480px) {
                     .beholder {
                         grid-template-columns: 1fr;
-                        /* 1 kolonne på ekstra små skærme */
-                        /* her bruges navnene - 6 gange per kolonne skal følges
-                    hele vejen ned, se andet eksempel med 3 i kolonnen  
-                    menu-item løber over to rækker i samme kolonne*/
-                    grid-template-areas:
+                     grid-template-areas:
                         'header'
                         'menu'
                         'main'
@@ -53,16 +43,15 @@
     <body>
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Bevæg dig, fede læs</title>
+            <title>Bevægelses applikation</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
         
             <div class="beholder" id="beholder">
-                <h1 style="color: white;">Så er det tid til at tabe det corona flæsk nu &#128525</h1>
+                <h1 style="color: white;">Bevæg dig for at ændre på bagelen!! &#128525</h1>
                
                 <p id="test1"> </p>
         
             </div>
-            <!-- <her kan man referere sin js-fil, fx -->
             <script src="app.js"></script>
         
     </body>

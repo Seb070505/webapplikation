@@ -28,21 +28,16 @@ function setup() {
     textSize(10);
     background(255, 255, 255);
     imageMode(CENTER);
-    // giver canvas border på 2 pixel, 
-    // og sørger derefter for at kanten tælles med i width
     canvas.elt.style.border = '5px solid black';
     canvas.elt.style.boxSizing = 'border-box';
     canvas.elt.style.borderRadius = '20px';
 
     canvas.parent('#beholder');
-    // gør canvas-elementet responsivt til skærmbredden
     canvas.elt.style.width = '100%';
     canvas.elt.style.height = '100%';
 
-    //bemærk at noden skal pakkes ud via .elt
     const parentDiv = select('#beholder').elt;
     const p = select('#test1').elt;
-    // indsæt canvas i ny position i rækkefølgen af elementer i div'en beholder
     parentDiv.insertBefore(canvas.elt, p);
 }
 
@@ -52,21 +47,37 @@ function draw() {
     strokeWeight(5);
     
     if (firkant === false && trekant === false && circle === true){
-       // ellipse(pos, pos2, 50);
         image(bagel,pos,pos2,100,100)
-        text('Ryk dig fatso: '  + str(stille),5,height-100)
+        if(stille < 1000){
+        text('Ændre på bagelen!!',5,height-100)
+        }
+        else if (stille > 1000 && stille < 10000){
+        text('Bevæg dig for at opnå en belønning!!',5,height-100)
+        }
+        else if (stille > 10000){
+        text('Ryk dig forhelvede',5,height-100)
+        }
     }
  
     else if (firkant === true && trekant === false && circle === false){
-       // rect(pos, pos2, 50, 50);
        image(donut,pos,pos2,100,100)
-       text('Hoppet: ' + str(hoppet), 5, height-100);
-    }
+       if(hoppet < 1000){
+       text('Få scoren op på 1000 for at opnå en belønning: ' + str(hoppet), 5, height-100);
+       }
+       else if(hoppet > 1000){
+        text('Tag en donut! :D', 5, height-100);
+       }
+    }   
+    
 
     else if(firkant === false && trekant === true && circle === false){
-        //ellipse(pos, pos2, 300)
         image(dorito,pos,pos2,300,300)
-        text('Løbet: ' + str(løbet),5, height-100);
+        if(løbet < 500){
+        text('Få scoren op på 500 for at tage en belønning: ' + str(løbet),5, height-100);
+        }
+        else if(løbet > 500){
+        text('Tag en håndfuld doritos! :D' + str(løbet),5, height-100);
+        }
     }
 
     if(accelerationY > 70){
