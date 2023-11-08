@@ -25,9 +25,7 @@ dorito = loadImage('assets/dorito.png')
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
-    textSize(10);
-    background(255, 255, 255);
-    imageMode(CENTER);
+
     canvas.elt.style.border = '5px solid black';
     canvas.elt.style.boxSizing = 'border-box';
     canvas.elt.style.borderRadius = '20px';
@@ -39,6 +37,11 @@ function setup() {
     const parentDiv = select('#beholder').elt;
     const p = select('#test1').elt;
     parentDiv.insertBefore(canvas.elt, p);
+
+
+    textSize(10);
+    background(255, 255, 255);
+    imageMode(CENTER);
 }
 
 
@@ -141,6 +144,4 @@ function deviceMoved(){
         lam = true
         gris = false
     }
-
-
 }
