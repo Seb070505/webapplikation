@@ -62,7 +62,8 @@ function draw() {
     else if (firkant === true && trekant === false && circle === false){
        image(donut,pos,pos2,100,100)
        if(hoppet < 1000){
-       text('Få scoren over 1000: ' + str(hoppet), 5, height-100);
+       text('Få scoren over 1000:', 5, height-100);
+       text(str(hoppet), width/2, height-50)
        }
        else if(hoppet > 1000){
         text('Tag en donut! :D', 5, height-100);
@@ -73,7 +74,8 @@ function draw() {
     else if(firkant === false && trekant === true && circle === false){
         image(dorito,pos,pos2,300,300)
         if(løbet < 500){
-        text('Få scoren over 500: ' + str(løbet),5, height-100);
+        text('Få scoren over 500:',5, height-100);
+        text(str(løbet), width/2, height-50)
         }
         else if(løbet > 500){
         text('Tag en håndfuld doritos! :D' + str(løbet),5, height-100);
